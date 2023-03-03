@@ -134,7 +134,7 @@ class Video extends Component {
 		// }
 
 		connections.forEach((id) => {
-			if (id === socketId) continue
+			if (id !== socketId) return
 
 			connections[id].addStream(window.localStream)
 
